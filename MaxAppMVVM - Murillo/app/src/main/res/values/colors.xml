@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_color_cl">#186096</color>
+    <color name="blue_color_es">#053F6A</color>
+    <color name="button_color">#00386C</color>
+    <color name="text_button_color">#232323</color>
+    <color name="status_color_connection">#727272</color>
+    <color name="home_color">#F1F1F1</color>
+    <color name="text_all_color">#000000</color>
+    <color name="text_labs">#95989A</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="company_name">#606060</color>
+    <color name="cellphone_button">#186096</color>
+    <color name="email_button">#C1392B</color>
+    <color name="client_status">#638735</color>
+    <color name="color_error_refused">#FF9900</color>
+    <color name="blocked">#3557AA</color>
+    <color name="mounted">#7FAA33</color>
+    <color name="invoice_status">#64863B</color>
+    <color name="cancel_status">#E40613</color>
+    <color name="await_return">#757575</color>
+    <color name="absence">#BF595F</color>
+    <color name="charter">#3E3E3E</color>
+</resources>

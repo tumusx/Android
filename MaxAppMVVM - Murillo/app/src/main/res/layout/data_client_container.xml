@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_corner_radius"
+    android:padding="10dp"
+    tools:context=".clients.dataClients.presenter.fragment.ClientDataFragment">
+
+    <TextView
+        android:id="@+id/txtContatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dados_cliente"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/status_color_connection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtContatos" />
+
+    <TextView
+        android:id="@+id/txtNomeClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viLine"
+        tools:text="29U202 - A E D" />
+
+    <TextView
+        android:id="@+id/txtTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtNomeClient"
+        tools:text="DROGARIA CAMPESTRE" />
+
+    <TextView
+        android:id="@+id/cpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/cpf"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTelefone" />
+
+    <TextView
+        android:id="@+id/txtCpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cpf"
+        app:layout_constraintStart_toEndOf="@+id/cpf"
+        app:layout_constraintTop_toTopOf="@+id/cpf"
+        tools:text="1111111" />
+
+    <TextView
+        android:id="@+id/cnpj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/cnpj"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCpf" />
+
+    <TextView
+        android:id="@+id/txtCnpj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cnpj"
+        app:layout_constraintStart_toEndOf="@+id/cnpj"
+        app:layout_constraintTop_toTopOf="@+id/cnpj"
+        tools:text="11110999111" />
+
+    <TextView
+        android:id="@+id/ramoAtividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/ramo_atividade"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cnpj" />
+
+    <TextView
+        android:id="@+id/txtRamoAtividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ramoAtividade"
+        app:layout_constraintStart_toEndOf="@+id/ramoAtividade"
+        app:layout_constraintTop_toTopOf="@+id/ramoAtividade"
+        tools:text="Panificadora" />
+
+    <TextView
+        android:id="@+id/enderecos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/enderecos"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ramoAtividade" />
+
+    <TextView
+        android:id="@+id/txtEndereco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/enderecos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/enderecos"
+        app:layout_constraintTop_toTopOf="@+id/enderecos"
+        tools:text="ROD BR - 060" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

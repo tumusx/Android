@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/home_color"
+        android:orientation="vertical"
+        tools:context=".clients.dataClients.presenter.fragment.ClientDataFragment">
+
+        <include
+            android:id="@+id/dataClienteContainer"
+            layout="@layout/data_client_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <include
+            android:id="@+id/containerContactClient"
+            layout="@layout/container_contact_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnStatusClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_radius"
+            android:text="@string/verificar_status"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
+

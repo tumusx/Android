@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white">
+
+    <TextView
+        android:id="@+id/txtNomeClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Murillo Alves" />
+
+    <TextView
+        android:id="@+id/txtTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/telefone"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtNomeClient" />
+
+    <TextView
+        android:id="@+id/txtTelefoneClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTelefone"
+        app:layout_constraintStart_toEndOf="@+id/txtTelefone"
+        app:layout_constraintTop_toTopOf="@+id/txtTelefone"
+        tools:text="729939-9292" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/email"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTelefoneClient"
+        app:layout_constraintEnd_toStartOf="@+id/txtEmailClient"
+        app:layout_constraintStart_toEndOf="@+id/txtTelefoneClient"
+        app:layout_constraintTop_toTopOf="@+id/txtTelefoneClient"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtEmailClient"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtEmail"
+        tools:text="gean.paiva@maximasistemas.com.br" />
+
+    <TextView
+        android:id="@+id/txtDataNascimento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/data_nasc"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCelularCliente"
+        app:layout_constraintEnd_toStartOf="@id/txtDataNascimentoClient"
+        app:layout_constraintStart_toStartOf="@+id/txtEmail"
+        app:layout_constraintTop_toTopOf="@+id/txtCelularCliente" />
+
+    <TextView
+        android:id="@+id/txtDataNascimentoClient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDataNascimento"
+        app:layout_constraintEnd_toEndOf="@+id/txtEmailClient"
+        app:layout_constraintStart_toEndOf="@+id/txtDataNascimento"
+        app:layout_constraintTop_toTopOf="@+id/txtDataNascimento"
+        tools:text="11/12/2001" />
+
+    <TextView
+        android:id="@+id/txtDataNasciConjuge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/data_nasc_conjuge"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/txtDataNasciConjugeClient"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtDataNascimento"
+        app:layout_constraintTop_toBottomOf="@+id/txtDataNascimento" />
+
+    <TextView
+        android:id="@+id/txtDataNasciConjugeClient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDataNasciConjuge"
+        app:layout_constraintEnd_toEndOf="@id/txtDataNascimentoClient"
+        app:layout_constraintStart_toEndOf="@+id/txtDataNasciConjuge"
+        app:layout_constraintTop_toTopOf="@+id/txtDataNasciConjuge"
+        tools:text="11/12/2000" />
+
+    <TextView
+        android:id="@+id/txtCelular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/celular"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTelefone" />
+
+    <TextView
+        android:id="@+id/txtCelularCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCelular"
+        app:layout_constraintStart_toEndOf="@+id/txtCelular"
+        app:layout_constraintTop_toTopOf="@+id/txtCelular"
+        tools:text="729939-9292" />
+
+    <TextView
+        android:id="@+id/txtConjuge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/conjuge"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCelular" />
+
+    <TextView
+        android:id="@+id/txtConjugeClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtConjuge"
+        app:layout_constraintStart_toEndOf="@+id/txtConjuge"
+        app:layout_constraintTop_toTopOf="@+id/txtConjuge"
+        tools:text="Lilian Simao" />
+
+    <TextView
+        android:id="@+id/txtTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/tipo_cliente"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtConjuge" />
+
+    <TextView
+        android:id="@+id/txtTipoClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTipo"
+        app:layout_constraintStart_toEndOf="@+id/txtTipo"
+        app:layout_constraintTop_toTopOf="@+id/txtTipo"
+        tools:text="Socio" />
+
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/time_cliente"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTipo" />
+
+    <TextView
+        android:id="@+id/txtTimeClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTime"
+        app:layout_constraintStart_toEndOf="@+id/txtTime"
+        app:layout_constraintTop_toTopOf="@+id/txtTime"
+        tools:text="Flamengo" />
+
+    <TextView
+        android:id="@+id/txtHobbie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/hobbie_client"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTime" />
+
+    <TextView
+        android:id="@+id/txtHobbieClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/text_all_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtHobbie"
+        app:layout_constraintStart_toEndOf="@+id/txtHobbie"
+        app:layout_constraintTop_toTopOf="@+id/txtHobbie"
+        tools:text="Não Informado" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

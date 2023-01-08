@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dados"
+        android:enabled="true"
+        android:icon="@drawable/icon_person_state"
+        android:title="@string/dados" />
+    <item
+        android:id="@+id/historico"
+        android:enabled="true"
+        android:icon="@drawable/icon_historic_state"
+        android:title="@string/historico_pedidos" />
+    <item
+        android:id="@+id/alvaras"
+        android:enabled="true"
+        android:icon="@drawable/icon_charter_state"
+        android:title="@string/alvarás" />
+
+</menu>
