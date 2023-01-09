@@ -3,15 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/font/fonts.xml" value="0.56171875" />
         <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/activity_clients.xml" value="0.5" />
         <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/activity_menu.xml" value="0.50390625" />
         <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/container_contact_client.xml" value="1.25" />
         <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/container_contact_items.xml" value="1.0" />
         <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/data_client_container.xml" value="0.9" />
         <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/fragment_charter_client.xml" value="0.80625" />
-        <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/fragment_client_data.xml" value="0.9" />
+        <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/fragment_client_data.xml" value="1.0" />
         <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/fragment_historic_client.xml" value="0.75" />
-        <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/historic_container_items.xml" value="1.1" />
+        <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/historic_container_items.xml" value="0.80625" />
         <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/item_icon.xml" value="0.7696897374701671" />
         <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/layout/items_home_container.xml" value="0.9" />
         <entry key="..\:/Android/MaxAppMVVM - Murillo/app/src/main/res/menu/bottom_navigation_clients.xml" value="0.50390625" />

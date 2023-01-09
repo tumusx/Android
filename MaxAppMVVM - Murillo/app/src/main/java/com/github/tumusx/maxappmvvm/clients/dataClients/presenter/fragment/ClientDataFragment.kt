@@ -12,8 +12,8 @@ import com.github.tumusx.maxappmvvm.clients.dataClients.domain.model.ClientDTO
 import com.github.tumusx.maxappmvvm.clients.dataClients.domain.model.Contato
 import com.github.tumusx.maxappmvvm.clients.dataClients.presenter.adapter.ContactAdapter
 import com.github.tumusx.maxappmvvm.clients.dataClients.presenter.viewModel.ClientDataViewModel
-import com.github.tumusx.maxappmvvm.commons.stateUI.StateUI
 import com.github.tumusx.maxappmvvm.commons.extension.customSnackBar
+import com.github.tumusx.maxappmvvm.commons.stateUI.StateUI
 import com.github.tumusx.maxappmvvm.databinding.FragmentClientDataBinding
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,6 +29,7 @@ class ClientDataFragment : Fragment() {
     ): View {
         binding = FragmentClientDataBinding.inflate(layoutInflater)
         configureObservables()
+        viewModel.searchClientRemote()
         return binding.root
     }
 

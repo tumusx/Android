@@ -1,4 +1,4 @@
-package com.github.tumusx.core_test
+package baseTest
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

@@ -26,6 +26,7 @@ class HistoricFragment : Fragment() {
     ): View {
         binding = FragmentHistoricClientBinding.inflate(layoutInflater)
         onConfigureObservables()
+        viewModel.searchHistoricResponse()
         return binding.root
     }
 

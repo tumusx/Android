@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.tumusx.core_network.ApiResult
-import com.github.tumusx.maxappmvvm.clients.dataClients.domain.repository.IClientDataRepository
 import com.github.tumusx.maxappmvvm.clients.historicClient.domain.repository.IHistoricRepository
 import com.github.tumusx.maxappmvvm.commons.stateUI.StateUI
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,17 +14,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HistoricClientViewModel @Inject constructor(
-    private val historicClientRepository: IHistoricRepository
-) : ViewModel() {
+    private val historicClientRepository: IHistoricRepository) : ViewModel() {
     private val _stateUI: MutableLiveData<StateUI> = MutableLiveData(StateUI.IsLoading)
     val stateUI: LiveData<StateUI> = _stateUI
 
-    init {
-        searchHistoricResponse()
-    }
-
-    private fun searchHistoricResponse() {
-        viewModelScope.launch(Dispatchers.IO) {
+    fun searchHistoricResponse() {
+        viewModelScope.launch(Dispatchers.Main) {
             val historicResponse = historicClientRepository.searchHistoricClient()
             if (historicResponse is ApiResult.Success) {
                 historicResponse.data?.let { result ->

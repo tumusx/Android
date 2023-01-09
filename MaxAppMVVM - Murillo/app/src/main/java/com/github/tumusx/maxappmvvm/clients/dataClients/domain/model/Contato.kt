@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class Contato(
     val celular: String,
     val conjuge: String,
-    val dataNascimentoConjuge: String,
+    val dataNascimentoConjuge: String?,
     @SerializedName("data_nascimento")
     val dataNascimento: String,
     val e_mail: String,

@@ -1,4 +1,4 @@
-package com.github.tumusx.core_test
+package baseTest
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer

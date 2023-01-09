@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MaxAppMVVM</string>
     <string name="cliente">Clientes</string>
+    <string name="client">Cliente</string>
     <string name="pedidos">Pedidos</string>
     <string name="ferramentas">Ferramentas</string>
     <string name="resumo_de_vendas">Resumo de vendas</string>
