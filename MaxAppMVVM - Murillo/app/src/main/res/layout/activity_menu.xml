@@ -8,15 +8,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvItemsHome"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:itemCount="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:spanCount="4"
+        tools:itemCount="2"
         tools:listitem="@layout/items_home_container" />
 
     <LinearLayout

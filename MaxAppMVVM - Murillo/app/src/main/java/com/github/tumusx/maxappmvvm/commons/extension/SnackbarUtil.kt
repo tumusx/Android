@@ -1,4 +1,4 @@
-package com.github.tumusx.maxappmvvm.commons.stateUI
+package com.github.tumusx.maxappmvvm.commons.extension
 
 import android.view.View
 import com.github.tumusx.maxappmvvm.R

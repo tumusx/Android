@@ -18,7 +18,7 @@
         tools:text="Murillo Alves" />
 
     <TextView
-        android:id="@+id/txtTelefone"
+        android:id="@+id/txtNameClient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -33,11 +33,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/ic_maxima_telefone"
         android:textColor="@color/text_all_color"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/txtTelefone"
-        app:layout_constraintStart_toEndOf="@+id/txtTelefone"
-        app:layout_constraintTop_toTopOf="@+id/txtTelefone"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNameClient"
+        app:layout_constraintStart_toEndOf="@+id/txtNameClient"
+        app:layout_constraintTop_toTopOf="@+id/txtNameClient"
         tools:text="729939-9292" />
 
     <TextView
@@ -58,7 +60,8 @@
 
     <TextView
         android:id="@+id/txtEmailClient"
-        android:layout_width="100dp"
+        android:layout_width="90dp"
+        android:drawableRight="@drawable/ic_maxima_email"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:textColor="@color/text_all_color"
@@ -72,7 +75,7 @@
         android:id="@+id/txtDataNascimento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="5dp"
         android:text="@string/data_nasc"
         android:textColor="@color/text_all_color"
@@ -129,7 +132,7 @@
         android:textColor="@color/text_all_color"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtTelefone" />
+        app:layout_constraintTop_toBottomOf="@id/txtNameClient" />
 
     <TextView
         android:id="@+id/txtCelularCliente"
@@ -138,6 +141,8 @@
         android:layout_marginStart="5dp"
         android:textColor="@color/text_all_color"
         android:textStyle="bold"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/ic_maxima_telefone"
         app:layout_constraintBottom_toBottomOf="@+id/txtCelular"
         app:layout_constraintStart_toEndOf="@+id/txtCelular"
         app:layout_constraintTop_toTopOf="@+id/txtCelular"

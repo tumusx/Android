@@ -13,7 +13,7 @@ import com.github.tumusx.maxappmvvm.clients.dataClients.domain.model.Contato
 import com.github.tumusx.maxappmvvm.clients.dataClients.presenter.adapter.ContactAdapter
 import com.github.tumusx.maxappmvvm.clients.dataClients.presenter.viewModel.ClientDataViewModel
 import com.github.tumusx.maxappmvvm.commons.stateUI.StateUI
-import com.github.tumusx.maxappmvvm.commons.stateUI.customSnackBar
+import com.github.tumusx.maxappmvvm.commons.extension.customSnackBar
 import com.github.tumusx.maxappmvvm.databinding.FragmentClientDataBinding
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -55,6 +55,7 @@ class ClientDataFragment : Fragment() {
         binding.dataClienteContainer.txtCpf.text = getString(R.string.INDEFINIDO)
         binding.dataClienteContainer.txtCnpj.text = dataClient.cnpj
         binding.dataClienteContainer.txtRamoAtividade.text = dataClient.ramoAtividade
+        binding.dataClienteContainer.txtNameClient.text = dataClient.nomeFantasia
         binding.dataClienteContainer.txtEndereco.text = dataClient.endereco
         binding.dataClienteContainer.txtNomeClient.text =
             dataClient.codigo + " - " + dataClient.nomeFantasia
@@ -65,15 +66,20 @@ class ClientDataFragment : Fragment() {
     private fun configureStateUI(stateUI: StateUI) {
         when (stateUI) {
             is StateUI.Success<*> -> {
+                binding.llContainer.visibility = View.VISIBLE
+                binding.llProgressLayout.visibility = View.GONE
                 configureUI((stateUI.data as ClientDTO))
             }
 
             is StateUI.Error -> {
+                binding.llContainer.visibility = View.VISIBLE
+                binding.llProgressLayout.visibility = View.GONE
                 Snackbar.make(binding.root, stateUI.messageError, Snackbar.LENGTH_SHORT).show()
             }
 
             is StateUI.IsLoading -> {
-                //TODO ajustar progress bar
+                binding.llProgressLayout.visibility = View.VISIBLE
+                binding.llContainer.visibility = View.GONE
             }
 
         }

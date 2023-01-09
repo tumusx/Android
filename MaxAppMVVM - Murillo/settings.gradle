@@ -15,5 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "MaxAppMVVM"
 include ':app'
 include ':core-network'
-include ':core-database'
 include ':core-test'

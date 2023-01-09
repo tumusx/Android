@@ -1,14 +1,20 @@
 package com.github.tumusx.maxappmvvm.clients
 
+import android.content.Context
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.github.tumusx.maxappmvvm.R
 import com.github.tumusx.maxappmvvm.clients.charterClient.CharterFragment
 import com.github.tumusx.maxappmvvm.clients.dataClients.presenter.fragment.ClientDataFragment
 import com.github.tumusx.maxappmvvm.clients.historicClient.presenter.fragment.HistoricFragment
+import com.github.tumusx.maxappmvvm.commons.extension.customSnackBar
 import com.github.tumusx.maxappmvvm.databinding.ActivityClientsBinding
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -31,17 +37,20 @@ class ClientsActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
-/*    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_toolbar, menu)
-        return super.onCreateOptionsMenu(menu)
+    private fun visibilitySearch(isVisible: Boolean) {
+        binding.llContainerSearch.isVisible = isVisible
+        binding.searchItem.setOnClickListener { showKeyboard() }
+        binding.imgMore.setOnClickListener { binding.root.customSnackBar("LEGENDAS - NAO FEITA", Snackbar.LENGTH_LONG) }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.menuVoltar -> this.finish()
-        }
-        return super.onOptionsItemSelected(item)
-    }*/
+    private fun showKeyboard() {
+        val inputMethodManager: InputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.toggleSoftInputFromWindow(
+            binding.root.applicationWindowToken,
+            InputMethodManager.SHOW_FORCED, 0
+        )
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -59,12 +68,23 @@ class ClientsActivity : AppCompatActivity() {
 
     private fun setupAppBarConfiguration() {
         binding.bottomNavigationView.setOnItemSelectedListener { itemSelect ->
+            var isVisibleSearch: Boolean = false
             val itemFragmentSelect = when (itemSelect.itemId) {
-                R.id.dados -> ClientDataFragment()
-                R.id.historico -> HistoricFragment()
-                R.id.alvaras -> CharterFragment()
+                R.id.dados -> {
+                    isVisibleSearch = false
+                    ClientDataFragment()
+                }
+                R.id.historico -> {
+                    isVisibleSearch = true
+                    HistoricFragment()
+                }
+                R.id.alvaras -> {
+                    isVisibleSearch = false
+                    CharterFragment()
+                }
                 else -> ClientDataFragment()
             }
+            visibilitySearch(isVisibleSearch)
             configureToolbar(itemSelect.title.toString())
             itemSelect.isChecked = true
             configureTransactionFragment(itemFragmentSelect)

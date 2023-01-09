@@ -4,5 +4,5 @@ import com.github.tumusx.core_network.ApiResult
 import com.github.tumusx.maxappmvvm.clients.dataClients.domain.model.ClientDTO
 
 interface IClientDataRepository {
-    suspend fun getDataClient() : ApiResult<ClientDTO?>
+    suspend fun getDataClient(): ApiResult<ClientDTO?>
 }

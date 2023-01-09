@@ -5,6 +5,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/llLayoutRounded"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="@drawable/asa"
@@ -15,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/imgIcon"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -25,6 +27,7 @@
 
 
         <TextView
+            android:id="@+id/txtIcon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"

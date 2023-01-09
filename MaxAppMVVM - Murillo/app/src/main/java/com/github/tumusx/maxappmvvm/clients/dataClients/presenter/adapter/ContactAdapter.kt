@@ -23,8 +23,7 @@ class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ContactViewHolder>() 
             binding.txtEmailClient.text = contact.e_mail
             binding.txtDataNascimentoClient.text = contact.dataNascimento
             binding.txtDataNasciConjugeClient.text = contact.dataNascimentoConjuge
-            binding.txtHobbieClient.text =
-                binding.txtHobbieClient.context.getString(R.string.INDEFINIDO)
+            binding.txtHobbieClient.text = binding.txtHobbieClient.context.getString(R.string.INDEFINIDO)
         }
     }
 

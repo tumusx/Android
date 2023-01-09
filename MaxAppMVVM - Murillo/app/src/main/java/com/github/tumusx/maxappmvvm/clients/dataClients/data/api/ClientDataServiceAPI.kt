@@ -1,4 +1,4 @@
-package com.github.tumusx.maxappmvvm.clients.dataClients.data.repository
+package com.github.tumusx.maxappmvvm.clients.dataClients.data.api
 
 import com.github.tumusx.maxappmvvm.clients.dataClients.domain.model.ClientsDTO
 import retrofit2.Response
