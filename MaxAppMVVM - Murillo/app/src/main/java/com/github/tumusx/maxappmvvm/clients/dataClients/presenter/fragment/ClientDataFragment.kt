@@ -13,6 +13,7 @@ import com.github.tumusx.maxappmvvm.clients.dataClients.domain.model.Contato
 import com.github.tumusx.maxappmvvm.clients.dataClients.presenter.adapter.ContactAdapter
 import com.github.tumusx.maxappmvvm.clients.dataClients.presenter.viewModel.ClientDataViewModel
 import com.github.tumusx.maxappmvvm.commons.extension.customSnackBar
+import com.github.tumusx.maxappmvvm.commons.extension.redirectUser
 import com.github.tumusx.maxappmvvm.commons.stateUI.StateUI
 import com.github.tumusx.maxappmvvm.databinding.FragmentClientDataBinding
 import com.google.android.material.snackbar.Snackbar
@@ -29,7 +30,7 @@ class ClientDataFragment : Fragment() {
     ): View {
         binding = FragmentClientDataBinding.inflate(layoutInflater)
         configureObservables()
-        viewModel.searchClientRemote()
+        onConfigureRoutDataSearch()
         return binding.root
     }
 
@@ -37,6 +38,14 @@ class ClientDataFragment : Fragment() {
         val contactAdapter = ContactAdapter()
         binding.containerContactClient.rvContatos.adapter = contactAdapter
         contactAdapter.updateList(clientContact)
+    }
+
+    private fun onConfigureRoutDataSearch() {
+        if (requireActivity().redirectUser()) {
+            viewModel.searchClientRemote()
+        } else {
+            viewModel.readClientInDataBase()
+        }
     }
 
     private fun configureObservables() {
@@ -58,8 +67,7 @@ class ClientDataFragment : Fragment() {
         binding.dataClienteContainer.txtRamoAtividade.text = dataClient.ramoAtividade
         binding.dataClienteContainer.txtNameClient.text = dataClient.nomeFantasia
         binding.dataClienteContainer.txtEndereco.text = dataClient.endereco
-        binding.dataClienteContainer.txtNomeClient.text =
-            dataClient.codigo + " - " + dataClient.nomeFantasia
+        binding.dataClienteContainer.txtNomeClient.text = dataClient.codigo + " - " + dataClient.nomeFantasia
         setupAdapterClient(dataClient.contatos)
         verifyStatusClient(dataClient.status)
     }

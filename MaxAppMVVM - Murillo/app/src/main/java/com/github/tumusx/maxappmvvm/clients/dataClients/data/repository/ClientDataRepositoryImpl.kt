@@ -7,7 +7,8 @@ import com.github.tumusx.maxappmvvm.clients.dataClients.domain.repository.IClien
 import javax.inject.Inject
 
 class ClientDataRepositoryImpl @Inject constructor(
-    private val serviceAPI: ClientDataServiceAPI) :
+    private val serviceAPI: ClientDataServiceAPI,
+) :
     IClientDataRepository {
 
     override suspend fun getDataClient(): ApiResult<ClientDTO?> {
@@ -21,4 +22,5 @@ class ClientDataRepositoryImpl @Inject constructor(
             ApiResult.Error(response.errorBody().toString())
         }
     }
+
 }

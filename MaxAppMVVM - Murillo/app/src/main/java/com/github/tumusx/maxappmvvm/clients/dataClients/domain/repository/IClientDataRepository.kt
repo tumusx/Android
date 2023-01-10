@@ -5,4 +5,5 @@ import com.github.tumusx.maxappmvvm.clients.dataClients.domain.model.ClientDTO
 
 interface IClientDataRepository {
     suspend fun getDataClient(): ApiResult<ClientDTO?>
+
 }

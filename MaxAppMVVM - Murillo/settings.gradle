@@ -16,3 +16,4 @@ rootProject.name = "MaxAppMVVM"
 include ':app'
 include ':core-network'
 include ':core-test'
+include ':core-database'

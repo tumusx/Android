@@ -10,6 +10,7 @@ import com.github.tumusx.maxappmvvm.clients.historicClient.domain.model.Pedido
 import com.github.tumusx.maxappmvvm.clients.historicClient.presenter.adapter.HistoricAdapter
 import com.github.tumusx.maxappmvvm.clients.historicClient.presenter.viewModel.HistoricClientViewModel
 import com.github.tumusx.maxappmvvm.commons.extension.customSnackBar
+import com.github.tumusx.maxappmvvm.commons.extension.redirectUser
 import com.github.tumusx.maxappmvvm.commons.stateUI.StateUI
 import com.github.tumusx.maxappmvvm.databinding.FragmentHistoricClientBinding
 import com.google.android.material.snackbar.Snackbar
@@ -25,9 +26,16 @@ class HistoricFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHistoricClientBinding.inflate(layoutInflater)
+        onConfigureRoutDataSearch()
         onConfigureObservables()
-        viewModel.searchHistoricResponse()
         return binding.root
+    }
+    private fun onConfigureRoutDataSearch() {
+        if (requireActivity().redirectUser()) {
+            viewModel.searchHistoricResponse()
+        } else {
+            viewModel.readHistoricInDatabase()
+        }
     }
 
     private fun onConfigureObservables() {

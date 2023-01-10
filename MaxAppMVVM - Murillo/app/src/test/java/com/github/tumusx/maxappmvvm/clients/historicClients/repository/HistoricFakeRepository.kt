@@ -1,4 +1,4 @@
-package com.github.tumusx.maxappmvvm.clients.historicClients
+package com.github.tumusx.maxappmvvm.clients.historicClients.repository
 
 import com.github.tumusx.core_network.ApiResult
 import com.github.tumusx.maxappmvvm.clients.historicClient.domain.model.HistoricDTO

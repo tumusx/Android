@@ -1,12 +1,11 @@
-package com.github.tumusx.maxappmvvm.clients.historicClient.presenter.viewModel
+package com.github.tumusx.maxappmvvm.clients.historicClients.viewModel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import baseTest.MainCoroutineRule
-import com.github.tumusx.maxappmvvm.clients.dataClients.repository.ClientFakeRepository
-import com.github.tumusx.maxappmvvm.clients.historicClient.domain.model.HistoricDTO
-import com.github.tumusx.maxappmvvm.clients.historicClients.HistoricFakeRepository
+import com.github.tumusx.maxappmvvm.clients.historicClient.presenter.viewModel.HistoricClientViewModel
+import com.github.tumusx.maxappmvvm.clients.historicClients.repository.HistoricFakeRepository
+import com.github.tumusx.maxappmvvm.clients.historicClients.repository.HistoricFakeRepositoryLocal
 import com.github.tumusx.maxappmvvm.commons.stateUI.StateUI
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Assert
 import org.junit.Before
@@ -25,7 +24,7 @@ class HistoricClientViewModelTest {
 
     @Before
     fun setup() {
-        viewModel = HistoricClientViewModel(HistoricFakeRepository(true))
+        viewModel = HistoricClientViewModel(HistoricFakeRepository(true), HistoricFakeRepositoryLocal())
     }
 
     @Test

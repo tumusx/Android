@@ -1,7 +1,5 @@
 package com.github.tumusx.maxappmvvm.clients.dataClients.domain.fake
 
-import com.github.tumusx.maxappmvvm.clients.dataClients.domain.model.Contato
-
 
 data class ClientDTOFake(
     var cnpj: String,

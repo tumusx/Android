@@ -3,6 +3,7 @@ package com.github.tumusx.maxappmvvm.clients.dataClients.viewModel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import baseTest.MainCoroutineRule
 import com.github.tumusx.maxappmvvm.clients.dataClients.presenter.viewModel.ClientDataViewModel
+import com.github.tumusx.maxappmvvm.clients.dataClients.repository.ClientFakeLocalRepository
 import com.github.tumusx.maxappmvvm.clients.dataClients.repository.ClientFakeRepository
 import com.github.tumusx.maxappmvvm.clients.dataClients.repository.ClientFakeRepository.Companion.clientDTO
 import com.github.tumusx.maxappmvvm.commons.stateUI.StateUI
@@ -26,7 +27,11 @@ class ClientDataViewModelTest {
 
     @Before
     fun setup() {
-        viewModel = ClientDataViewModel(ClientFakeRepository(false), Dispatchers.Main)
+        viewModel = ClientDataViewModel(
+            ClientFakeRepository(false),
+            Dispatchers.Main,
+            ClientFakeLocalRepository()
+        )
     }
 
     @Test

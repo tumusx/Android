@@ -1,29 +1,39 @@
 package com.github.tumusx.core_database.entitys
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.ForeignKey.CASCADE
 import androidx.room.PrimaryKey
 
 @Entity(
-    tableName = "contact",
-    foreignKeys = [ForeignKey(
-        entity = ClientEntity::class,
-        parentColumns = arrayOf("clientID"),
-        childColumns = arrayOf("clientContactID"),
-        onDelete = CASCADE
-    )]
+    tableName = "contact"
 )
 data class ContactEntity(
-    @PrimaryKey val contactId: Long,
-    val clientContactID: Long,
+    @PrimaryKey var contactId: Long? = null,
+
+    @ColumnInfo(name = "celular")
     val celular: String,
+
+    @ColumnInfo(name = "conjuge")
     val conjuge: String,
-    val dataNascimentoConjuge: String,
-    val dataNascimento: String,
-    val e_mail: String,
+
+    @ColumnInfo(name = "data_nascimento_conjuge")
+    val bithClientConjuge: String,
+
+    @ColumnInfo(name = "data_nascimento")
+    val bithClient: String,
+
+    @ColumnInfo(name = "email")
+    val email: String,
+
+    @ColumnInfo(name = "name")
     val nome: String,
+
+    @ColumnInfo(name = "telefone")
     val telefone: String,
+
+    @ColumnInfo(name = "time")
     val time: String,
+
+    @ColumnInfo(name = "tipo")
     val tipo: String
 )

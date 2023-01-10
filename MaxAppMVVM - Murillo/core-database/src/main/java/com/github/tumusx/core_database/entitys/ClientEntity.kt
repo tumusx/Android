@@ -2,36 +2,33 @@ package com.github.tumusx.core_database.entitys
 
 import androidx.room.*
 
-/*data class ClientWithContacts(
-    @Embedded val client: ClientEntity,
-    @Relation(
-        parentColumn = "",
-        entityColumn = ""
-    )
-    val contatos: List<ContactEntity>
-)*/
-
-
 @Entity(tableName = "client")
 data class ClientEntity(
     @PrimaryKey var clientID: Long? = null,
-
+    @ColumnInfo(name = "cnpj")
     val cnpj: String,
 
-    val codigo: String,
+    @ColumnInfo(name = "codigo")
+    val code: String,
 
-    @Embedded
-    val contatos: List<ContactEntity>,
+    @ColumnInfo(name = "contatos")
+    val contact: List<ContactEntity>,
 
-    val endereco: String,
+    @ColumnInfo(name = "endereco")
+    val address: String,
 
+    @ColumnInfo(name = "id_client_user")
     val id: Int,
 
-    val nomeFantasia: String,
+    @ColumnInfo(name = "nome_fantasia")
+    val fantasyName: String,
 
-    val ramoAtividade: String,
+    @ColumnInfo(name = "ramo_atividade")
+    val activityClient: String,
 
-    val razaoSocial: String,
+    @ColumnInfo(name = "razao_social")
+    val companyName: String,
 
+    @ColumnInfo(name = "status")
     val status: String
 )
